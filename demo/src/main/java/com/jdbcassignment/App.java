@@ -18,7 +18,10 @@ public class App
         Connection con = null;
         try {
         con = DriverManager.getConnection("jdbc:mysql://localhost/appdb", "root", "examly");
-            if (con )
+            if (con !=null) System.out.println("Connection scuccessful");
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
 
 
 
