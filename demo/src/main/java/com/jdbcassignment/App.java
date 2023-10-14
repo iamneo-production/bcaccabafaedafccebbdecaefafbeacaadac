@@ -20,10 +20,15 @@ public class App
         con = DriverManager.getConnection("jdbc:mysql://localhost/appdb", "root", "examly");
             //if (con !=null) System.out.println("Connection scuccessful");
 
-            Statement stmt = con.createStatement();
+            //Statement stmt = con.createStatement();
 
-            String sqlQuery = "insert into customer values(" + 11 + ", 'Cutomer2', " + 3000 + ");";
-            System.out.println(sqlQuery);
+            PreparedStatement stmt = con.prepareStatement("insert into customer values(?,?,?)");
+            stmt.setInt(1, 12);
+            stmt.setString(2, "Customer3");
+            stmt.setInt(3, 50);
+
+            //String sqlQuery = "insert into customer values(" + 11 + ", 'Cutomer2', " + 3000 + ");";
+            //System.out.println(sqlQuery);
             //stmt.execute(sqlQuery);
 
 
