@@ -29,10 +29,8 @@ public class App
         int count = stmt.executeUpdate();
         if(count >0)
         System.out.println("Reconrd inserted successfully");
-        //  if(con !=null) {
+        //  if(con !=null) 
         //     System.out.println("Connection successful");
-        }
-        con.close();
         } catch(Exception e) {
             e.printStackTrace();
         }
