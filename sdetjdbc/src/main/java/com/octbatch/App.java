@@ -13,6 +13,12 @@ public class App
     {
         Connection con = null;
 
-        con = DriverManager.getConnection(mysql)
+        con = DriverManager.getConnection("jdbc:mysql://localhost/appdb", "root", "examly");
+
+        if(con != null) {
+        System.out.println("Connection established");
+        } else {
+            System.out.println("Connnection is not established");
+        }
     }
 }
