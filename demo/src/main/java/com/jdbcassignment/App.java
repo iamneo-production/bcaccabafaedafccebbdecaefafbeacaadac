@@ -3,6 +3,7 @@ package com.jdbcassignment;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.PreparedStatement;
+import java.sql.ResultSet;
 import java.sql.Statement;
 
 
@@ -22,17 +23,22 @@ public class App
 
             //Statement stmt = con.createStatement();
 
-            PreparedStatement stmt = con.prepareStatement("insert into customer values(?,?,?)");
-            stmt.setInt(1, 12);
-            stmt.setString(2, "Customer3");
-            stmt.setInt(3, 50);
-            int recCount = stmt.executeUpdate();
-            System.out.println("Affected record count:" +recCount);
+            //PreparedStatement stmt = con.prepareStatement("insert into customer values(?,?,?)");
+            // stmt.setInt(1, 12);
+            // stmt.setString(2, "Customer3");
+            // stmt.setInt(3, 50);
+            // int recCount = stmt.executeUpdate();
+            // System.out.println("Affected record count:" +recCount);
             //String sqlQuery = "insert into customer values(" + 11 + ", 'Cutomer2', " + 3000 + ");";
             //System.out.println(sqlQuery);
             //stmt.execute(sqlQuery);
             String sqlQuery = "select 8 from customer;";
-            
+            Statement stmt = con.createStatement();
+            ResultSet rs = stmt.executeQuery(sqlQuery);
+            while(rs.next()) {
+                System.out.println(rs.getInt("id") + "|" + rs.getString("sqlQuery"));
+            }
+
 
 
 
