@@ -22,7 +22,9 @@ public class App
 
             Statement stmt = con.createStatement();
 
-            String sqlQuery = "insert into customer values(" 
+            String sqlQuery = "insert into customer values(" + 11 + ", 'Cutomer2', " + 3000 + ");";
+            System.out.println(sqlQuery);
+            //stmt.execute(sqlQuery);
 
 
         } catch (Exception e) {
