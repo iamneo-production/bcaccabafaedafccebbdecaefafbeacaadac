@@ -32,11 +32,11 @@ public class App
             //String sqlQuery = "insert into customer values(" + 11 + ", 'Cutomer2', " + 3000 + ");";
             //System.out.println(sqlQuery);
             //stmt.execute(sqlQuery);
-            String sqlQuery = "select 8 from customer;";
+            String sqlQuery = "select * from customer;";
             Statement stmt = con.createStatement();
             ResultSet rs = stmt.executeQuery(sqlQuery);
             while(rs.next()) {
-                System.out.println(rs.getInt("id") + "|" + rs.getString("sqlQuery"));
+                System.out.println(rs.getInt(1) + "|" + rs.getString(2) +"|"+ rs.getInt(3));
             }
 
 
