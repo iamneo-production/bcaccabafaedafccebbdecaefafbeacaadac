@@ -18,10 +18,18 @@ public class App
         Connection con = null;
         try {
         con = DriverManager.getConnection("jdbc:mysql://localhost/appdb", "root", "examly");
-            if (con !=null) System.out.println("Connection scuccessful");
+            //if (con !=null) System.out.println("Connection scuccessful");
+
+            Statement stmt = con.createStatement();
+
+            String sqlQuery = "insert into customer values(" 
+
+
         } catch (Exception e) {
             e.printStackTrace();
         }
+    }
+}
 
 
 
@@ -51,5 +59,5 @@ public class App
         //     e.printStackTrace();
         // }
         
-    }
-}
+    
+
