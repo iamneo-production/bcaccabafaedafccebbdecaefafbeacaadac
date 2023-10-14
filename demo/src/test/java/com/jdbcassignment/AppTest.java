@@ -1,4 +1,4 @@
-package com.example;
+package com.jdbcassignment;
 
 import static org.junit.Assert.assertTrue;
 
