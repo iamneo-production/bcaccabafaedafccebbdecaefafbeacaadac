@@ -17,8 +17,10 @@ public class App
         if(con !=null) {
             System.out.println("Connection successful");
         }
+        con.close();
         } catch(Exception e) {
             e.printStackTrace();
         }
+        
     }
 }
