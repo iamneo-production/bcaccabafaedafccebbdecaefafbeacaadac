@@ -26,10 +26,14 @@ public class App
             stmt.setInt(1, 12);
             stmt.setString(2, "Customer3");
             stmt.setInt(3, 50);
-
+            int recCount = stmt.executeUpdate();
+            System.out.println("Affected record count:" +recCount);
             //String sqlQuery = "insert into customer values(" + 11 + ", 'Cutomer2', " + 3000 + ");";
             //System.out.println(sqlQuery);
             //stmt.execute(sqlQuery);
+            String sqlQuery = "select 8 from customer;";
+            
+
 
 
         } catch (Exception e) {
