@@ -21,4 +21,7 @@ public class App
             System.out.println("Connnection is not established");
         }
     }
+
+    mvn exec:java -Dexec.mainClass="com.example.Client.Main" -Dexec.cleanupDaemonThreads=false
+
 }
