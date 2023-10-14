@@ -22,6 +22,6 @@ public class App
         }
     }
 
-    mvn exec:java -Dexec.mainClass="com.example.Client.Main" -Dexec.cleanupDaemonThreads=false
+    //mvn exec:java -Dexec.mainClass="com.example.Client.Main" -Dexec.cleanupDaemonThreads=false
 
 }
